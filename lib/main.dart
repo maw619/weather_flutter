@@ -24,7 +24,7 @@ class _HomeState extends State<Home> {
   var windSpeed;
 
   Future getWeather() async{
-    http.Response response = await http.get("http://api.openweathermap.org/data/2.5/weather?q=Baltimore&units=imperial&appid=0b653393180f22e1f3f98b73fcabfdd4");
+    http.Response response = await http.get("http://api.openweathermap.org/data/2.5/weather?q=maryland&units=imperial&appid=0b653393180f22e1f3f98b73fcabfdd4");
     var results = jsonDecode(response.body);
     setState(() {
       this.temp = results['main']['temp'];
